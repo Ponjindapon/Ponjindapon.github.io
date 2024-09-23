@@ -1,206 +1,305 @@
-<html>
- <head>
-  <title>Web Page Layout</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
-      font-family: 'Georgia', serif;
-      background-color: #f5f5f5;
-      color: #4b2e2e;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      width: 80%;
-      margin: 0 auto;
-      padding: 20px;
-      border: 1px solid #4b2e2e;
-    }
-    .header, .section, .footer {
-      border-bottom: 2px solid #4b2e2e;
-      padding: 20px 0;
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .header .logo {
-      font-size: 30px;
-      font-weight: bold;
-    }
-    .header .cta {
-      border: 1px solid #4b2e2e;
-      padding: 10px 15px;
-      border-radius: 15px;
-      font-size: 15px;
-      display: flex;
-      align-items: center;
-    }
-    .section {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .section .text-content {
-      width: 60%;
-    }
-    .section .image-content {
-      width: 35%;
-      height: 150px;
-      border: 1px solid #4b2e2e;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .section .image-content img {
-      max-width: 100%;
-      max-height: 100%;
-    }
-    .section .text-content h2 {
-      font-size: 24px;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-    .section .text-content p {
-      margin: 10px 0;
-    }
-    .question p {
-        margin-bottom: 15px;
-    }
-    .section .text-content .cta-button {
-      border: 1px solid #4b2e2e;
-      padding: 5px 10px;
-      border-radius: 15px;
-      display: inline-block;
-      margin-top: 10px;
-    }
-    .faq {
-      text-align: center;
-    }
-    .faq .question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 10px 0;
-    }
-    .faq .question .icon {
-      font-size: 18px;
-    }
-    .social-proof {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-    .social-proof .testimonial {
-      text-align: center;
-    }
-    .social-proof .testimonial .stars {
-      color: #4b2e2e;
-    }
-    .footer {
-      text-align: center;
-    }
-  </style>
- </head>
- <body>
-  <div class="container">
-    <div class="header">
-      <div class="logo">
-        <h1 class="single-line">PL OOP Concept</h1>
-      </div>
-      <div class="search-container">
-        <input type="text" placeholder="ค้นหา..." class="search-input"/>
-        <button class="cta">
-          <i class="fas fa-search"></i> <!-- Search icon -->
-        </button>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Layout</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f5f5f5;
+            color: #4b2e2e;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #4b2e2e;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header, .section, .footer {
+            border-bottom: 2px solid #4b2e2e;
+            padding: 20px 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input {
+            border: 1px solid #4b2e2e;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .cta {
+            border: 1px solid #4b2e2e;
+            padding: 10px 15px;
+            border-radius: 15px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px 0;
+        }
+        .text-content {
+            width: 60%;
+        }
+        .image-content {
+            width: 35%;
+            height: auto;
+            border: 1px solid #4b2e2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-content img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 5px;
+        }
+        h2, h3, h4 {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .code-block {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            overflow: auto;
+            margin: 10px 0;
+        }
+        .cta-button {
+            border: 1px solid #4b2e2e;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 10px;
+            background-color: #eaeaea;
+            cursor: pointer;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h1>OOP Concept</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="ค้นหา..." class="search-input"/>
+                <button class="cta">
+                    <i class="fas fa-search"></i> <!-- Search icon -->
+                </button>
+            </div>
+        </div>
       
-    <div class="section">
-      <div class="text-content">
-        <h2>การเปรียบเทียบในการเขียนโปรเเกรมเเบบ OOP ด้วย ภาษา Java, C++, เเละ Python</h2>
-        <p>
-          การเขียนโปรเเกรมเชิงวัตถุ (Object-oriented Programming หรือ OOP) ด้วยภาษา Java, C++, Python 
-          ซึ่งจะมีความเหมือน เเละความเเตกต่างกันหลายๆ ด้าน เช่น การสืบทอดจากหลายคลาส การใช้คลาสเเละออบเจ็กต์ต่างๆ เป็นต้น
-        </p>
-      </div>
-      <div class="image-content">
-        <img alt="Placeholder image" height="1000" src="https://i.pinimg.com/originals/28/13/3d/28133d6c016fe00e2e6845833e535103.png" width="1000"/>
-      </div>
-    </div>
+        <div class="section">
+            <div class="text-content">
+                <h2>การเปรียบเทียบในการเขียนโปรเเกรมเเบบ OOP ด้วย ภาษา Java, C++, เเละ Python</h2>
+                <p>
+                    การเขียนโปรเเกรมเชิงวัตถุ (Object-oriented Programming หรือ OOP) ด้วยภาษา Java, C++, Python 
+                    ซึ่งจะมีความเหมือน เเละความเเตกต่างกันหลายๆ ด้าน เช่น การสืบทอดจากหลายคลาส การใช้คลาสเเละออบเจ็กต์ต่างๆ เป็นต้น
+                </p>
+            </div>
+            <div class="image-content">
+                <img alt="Placeholder image" src="https://i.pinimg.com/originals/28/13/3d/28133d6c016fe00e2e6845833e535103.png"/>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>หลักการเเละการเปรียบเทียบแนวคิดพื้นฐานของ OOP</h2>
+            <p>1. Class คือพิมพ์เขียว (blueprint) สำหรับการสร้างวัตถุ เช่น Animal, Dog, Cat ตามตัวอย่างข้างต้น</p>
+            <p>2. Object วัตถุหรืออินสแตนซ์คือ สิ่งที่สร้างจากคลาส เช่น a, b, c</p>
+            <p>3. Subclass/Derived Class คลาสที่สืบทอดจากคลาสพ่อ/แม่ เช่น Dog, Cat สืบทอดจาก Animal</p>
+            <p>4. Message การส่งข้อมูลให้กับวัตถุ เช่น การเรียกใช้ method sound()</p>
+            <p>5. Inheritance การสืบทอดคุณสมบัติจากคลาสแม่ (Animal) มายังคลาสลูก (Dog และ Cat)</p>
+            <p>6. Polymorphism การใช้ method เดียวกัน (เช่น sound()) แต่ให้ผลลัพธ์ต่างกันตามคลาสที่เป็นวัตถุ</p>
+        </div>
+
+        <div class="question">
+            <h3>ตัวอย่างเปรียบเทียบสำหรับภาษา Java</h3>
+            <div class="code-block">
+                <pre>
+class Animal {
+    Animal() {
+        System.out.println("create animal");
+    }
+    void sound() {
+        System.out.println("animal makes a sound");
+    }
+}
+class Dog extends Animal {
+    Dog() {
+        System.out.println("dog");
+    }
+    @Override
+    void sound() {
+        System.out.println("dog barks");
+    }
+}
+class Cat extends Animal {
+    Cat() {
+        System.out.println("cat");
+    }
+    @Override
+    void sound() {
+        System.out.println("cat meows");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Animal a = new Dog();
+        a.sound(); // Demonstrates polymorphism
+    }
+}
+                </pre>
+            </div>
+            <h3>Example Output:</h3>
+            <div class="code-block">
+                <pre>
+create animal
+dog
+dog barks
+                </pre>
+            </div>
+        </div>
+
+        <div class="question">
+            <h4>ตัวอย่างเปรียบเทียบสำหรับภาษา C++</h4>
+            <div class="code-block">
+                <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+class Animal {
+public:
+    Animal() {
+        cout &lt;&lt; "create animal" &lt;&lt; endl;
+    }
+    virtual void sound() {
+        cout &lt;&lt; "animal makes a sound" &lt;&lt; endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    Dog() {
+        cout &lt;&lt; "dog" &lt;&lt; endl;
+    }
+    void sound() override {
+        cout &lt;&lt; "dog barks" &lt;&lt; endl;
+    }
+};
+
+class Cat : public Animal {
+public:
+    Cat() {
+        cout &lt;&lt; "cat" &lt;&lt; endl;
+    }
+    void sound() override {
+        cout &lt;&lt; "cat meows" &lt;&lt; endl;
+    }
+};
+
+int main() {
+    Animal* a = new Dog();
+    a-&gt;sound();  // Demonstrates polymorphism
+    delete a;
+    return 0;
+}
+                </pre>
+            </div>
+            <h3>Example Output:</h3>
+            <div class="code-block">
+                <pre>
+create animal
+dog
+dog barks
+                </pre>
+            </div>
+        </div>
+
+        <div class="question">
+            <h4>ตัวอย่างเปรียบเทียบสำหรับภาษา Python</h4>
+            <div class="code-block">
+                <pre>
+class Animal:
+    def __init__(self):
+        print("create animal")
     
-    <div class="section faq">
-      <h2>หลักการเเละการเปรียบเทียบแนวคิดพื้นฐานของ OOP</h2>
-      <div class="question">
-        <p>1. Class คือพิมพ์เขียว (blueprint) สำหรับการสร้างวัตถุ เช่น Animal, Dog, Cat ตามตัวอย่างข้างต้น</p>
-        <p>2. Object วัตถุหรืออินสแตนซ์คือ สิ่งที่สร้างจากคลาส เช่น a, b, c</p>
-        <p>3. Subclass/Derived Class คลาสที่สืบทอดจากคลาสพ่อ/แม่ เช่น Dog, Cat สืบทอดจาก Animal</p>
-        <p>4. Message การส่งข้อมูลให้กับวัตถุ เช่น การเรียกใช้ method sound()</p>
-        <p>5. Inheritance การสืบทอดคุณสมบัติจากคลาสแม่ (Animal) มายังคลาสลูก (Dog และ Cat)</p>
-        <p>6. Polymorphism การใช้ method เดียวกัน (เช่น sound()) แต่ให้ผลลัพธ์ต่างกันตามคลาสที่เป็นวัตถุ</p>
-        <i class="fas fa-chevron-down icon"></i>
-      </div>
-      <div class="question">
-        <p>__________________________</p>
-        <i class="fas fa-chevron-down icon"></i>
-      </div>
-      <div class="cta-button">__________________________</div>
+    def sound(self):
+        print("animal makes a sound")
+
+class Dog(Animal):
+    def __init__(self):
+        super().__init__()
+        print("dog")
+    
+    def sound(self):
+        print("dog barks")
+
+class Cat(Animal):
+    def __init__(self):
+        super().__init__()
+        print("cat")
+    
+    def sound(self):
+        print("cat meows")
+
+a = Dog()
+a.sound()  # Demonstrates polymorphism
+                </pre>
+            </div>
+            <h3>Example Output:</h3>
+            <div class="code-block">
+                <pre>
+create animal
+dog
+dog barks
+                </pre>
+            </div>
+        </div>
+            <div class="question">
+              <h2>abstract class คืออะไร</h2>
+                <p> คือ คลาสที่ไม่สามารถสร้างอินสเเตนซ์ได้โดยตรง เเต่จะใช้เป็นเเม่เเบบสำหรับคลาสลูก </p>
+                <p> ในตัวอย่างนี้ ไม่มีคลาสที่เป็น abstract class เเต่ถ้าต้องการสร้าง abstract class สามารถทำได้โดยใช้ abstract keyword ใน java เเละ C++ หรือ ทำ method เป็น abstract ใน Python</p>
+            </div>
     </div>
 
-    <div class="section social-proof">
-      <div class="testimonial">
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+        <div class="footer">
+            <p>สร้างด้วยความตั้งใจ © 2024</p>
         </div>
-        <p>__________________________</p>
-        <p>__________________________</p>
-      </div>
-      <div class="testimonial">
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <p>__________________________</p>
-        <p>__________________________</p>
-      </div>
-      <div class="testimonial">
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <p>__________________________</p>
-        <p>__________________________</p>
-      </div>
     </div>
+</body>
 
-    <div class="section">
-      <h2>Clear and Concise Messaging and CTA</h2>
-      <div class="text-content">
-        <p>__________________________</p>
-        <p>__________________________</p>
-      </div>
-      <div class="text-content">
-        <p>__________________________</p>
-        <p>__________________________</p>
-      </div>
-      <div class="cta-button">__________________________</div>
-    </div>
-
-    <div class="footer">
-      <h2>Clear Contact Information</h2>
-    </div>
-  </div>
- </body>
 </html>
-
+</body>
+</html>
